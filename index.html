@@ -58,6 +58,11 @@
         ::-webkit-scrollbar-track { background: #09090b; }
         ::-webkit-scrollbar-thumb { background: #27272a; border-radius: 4px; }
         ::-webkit-scrollbar-thumb:hover { background: #3f3f46; }
+        .tab-active {
+            background-color: #ffffff !important;
+            color: #09090b !important;
+            font-weight: 700 !important;
+        }
     </style>
 </head>
 <body class="bg-obsidian text-zinc-100 antialiased selection:bg-zinc-100 selection:text-zinc-900">
@@ -71,7 +76,7 @@
                 </div>
                 <div class="flex flex-col">
                     <span class="font-bold text-sm tracking-tight text-white group-hover:text-zinc-300 transition">Sanjay Sateesh Kumar</span>
-                    <span class="text-[11px] text-zinc-400 font-mono">Entrepreneur & Trainee</span>
+                    <span class="text-[11px] text-zinc-400 font-mono">Founder, Twin Ink • ProtoSem Trainee</span>
                 </div>
             </a>
 
@@ -127,7 +132,7 @@
 
                 <div class="pt-8 flex flex-wrap items-center gap-3">
                     <a href="#protosem" class="px-5 py-2.5 rounded-lg bg-white text-zinc-950 font-semibold text-sm hover:bg-zinc-200 transition flex items-center gap-2">
-                        <span>Explore 20-Week ProtoSem Journey</span>
+                        <span>Explore 20-Week ProtoSem Logs & Photos</span>
                         <i class="fa-solid fa-arrow-down text-xs"></i>
                     </a>
                     <a href="#projects" class="px-5 py-2.5 rounded-lg bg-zinc-900 hover:bg-zinc-800 text-zinc-200 border border-zinc-800 font-medium text-sm transition">
@@ -343,9 +348,9 @@
                         </p>
                     </div>
                     <div class="pt-4 border-t border-zinc-800 flex items-center justify-between text-xs">
-                        <span class="text-zinc-400">Week 00 & 06 Published</span>
+                        <span class="text-zinc-400">Week 00 & 06 Published Below</span>
                         <a href="#protosem" class="text-white font-semibold hover:underline flex items-center gap-1">
-                            <span>Read 20-Week Logs Below</span>
+                            <span>Explore Field Logs</span>
                             <i class="fa-solid fa-arrow-down text-[10px]"></i>
                         </a>
                     </div>
@@ -418,66 +423,435 @@
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <!-- Subtle Programme Progress Indicator -->
-                <div class="pt-4 border-t border-zinc-800 flex flex-col sm:flex-row sm:items-center justify-between gap-4 font-mono text-xs text-zinc-400">
-                    <div class="flex items-center gap-3">
-                        <span class="text-white font-semibold">PROGRESSION RAIL</span>
-                        <div class="flex items-center text-zinc-600 font-bold">
-                            <span class="text-emerald-400 font-bold">W00 (Live)</span>
-                            <span class="px-1 text-zinc-700">━━━━</span>
-                            <span class="text-emerald-400 font-bold">W06 (Live)</span>
-                            <span class="px-1 text-zinc-700">━━━━</span>
-                            <span class="text-zinc-400">W10</span>
-                            <span class="px-1 text-zinc-700">━━━━</span>
-                            <span class="text-zinc-400">W15</span>
-                            <span class="px-1 text-zinc-700">━━━━</span>
-                            <span class="text-zinc-200">W20</span>
+            <!-- ========================================================================= -->
+            <!-- FEATURED LIVE BLOG SHOWCASE (Direct Inline Reader with Full Images)       -->
+            <!-- ========================================================================= -->
+            <div class="space-y-6">
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-borderSubtle pb-4">
+                    <div>
+                        <span class="mono-tag text-emerald-400 font-bold">FEATURED LIVE FIELD LOGS</span>
+                        <h3 class="text-2xl font-bold text-white tracking-tight">Full Field Stories & Photography</h3>
+                    </div>
+                    
+                    <!-- Live Showcase Switcher Tabs -->
+                    <div class="flex items-center gap-2 bg-zinc-950 p-1.5 rounded-xl border border-zinc-800">
+                        <button onclick="switchLiveShowcase('week-00')" id="tab-week-00" class="px-4 py-2 rounded-lg text-xs font-mono font-bold transition tab-active shadow-md flex items-center gap-2">
+                            <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                            <span>WEEK 00: CHENNAI RETAIL SUMMIT</span>
+                        </button>
+                        <button onclick="switchLiveShowcase('week-06')" id="tab-week-06" class="px-4 py-2 rounded-lg text-xs font-mono font-medium transition bg-zinc-900 hover:bg-zinc-800 text-zinc-400 hover:text-zinc-200 border border-zinc-800 flex items-center gap-2">
+                            <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
+                            <span>WEEK 06: DIGITAL FABRICATION</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- SHOWCASE 1: WEEK 00 CHENNAI RETAIL SUMMIT -->
+                <div id="showcase-week-00" class="bento-card p-6 sm:p-10 space-y-8 bg-zinc-950 border-zinc-700 shadow-2xl">
+                    <div class="space-y-3">
+                        <div class="flex flex-wrap items-center gap-2">
+                            <span class="px-2.5 py-0.5 rounded bg-emerald-950 text-emerald-300 font-mono text-xs font-bold border border-emerald-800">
+                                WEEK 00 • PUBLISHED FIELD LOG
+                            </span>
+                            <span class="px-2.5 py-0.5 rounded bg-zinc-900 text-zinc-300 font-mono text-xs border border-zinc-800">
+                                RETAILERS ASSOCIATION OF INDIA (RAI)
+                            </span>
+                            <span class="px-2.5 py-0.5 rounded bg-zinc-900 text-zinc-300 font-mono text-xs border border-zinc-800">
+                                FORGE INNOVATION & VENTURES
+                            </span>
+                        </div>
+                        <h3 class="text-2xl sm:text-4xl font-extrabold text-white tracking-tight leading-snug">
+                            Real-World Retail Dynamics & Strategic Networking at the Chennai Retail Summit
+                        </h3>
+                        <p class="text-sm text-zinc-400">
+                            Stepping out of the comfort zone, exploring enterprise retail structures, and kicking off the 20-week PRICE ProtoSem innovation roadmap.
+                        </p>
+                    </div>
+
+                    <!-- Sanjay's Summit Reflection Box -->
+                    <div class="p-6 rounded-2xl bg-zinc-900/90 border border-zinc-800 space-y-3 relative overflow-hidden">
+                        <div class="flex items-center gap-2 text-emerald-400 font-mono text-xs font-bold uppercase tracking-wider">
+                            <i class="fa-solid fa-quote-left"></i>
+                            <span>Summit Field Note & Personal Reflection</span>
+                        </div>
+                        <blockquote class="italic text-zinc-100 text-sm sm:text-base leading-relaxed">
+                            "Attending the Chennai Retail Summit was an enriching and insightful experience. I had the opportunity to meet and interact with several business professionals and industry experts, which helped me gain a better understanding of business structures, retail operations, and how businesses work in the real world. The event also gave me the chance to build meaningful connections with people from different backgrounds and learn from their experiences and perspectives. Overall, it was a great platform for learning, networking, and gaining practical exposure, and I'm grateful for the valuable insights and connections I gained from this experience."
+                        </blockquote>
+                        <div class="text-xs text-zinc-400 pt-2 font-mono flex items-center justify-between border-t border-zinc-800/80">
+                            <span>— Sanjay Sateesh Kumar // Innovation Engineer Trainee</span>
+                            <span class="text-emerald-400">Chennai Retail Summit (RAI)</span>
                         </div>
                     </div>
-                    <div class="text-[11px] text-zinc-400">
-                        Click any card to read its full field note, event photography & documentation
+
+                    <!-- Dual Event Photography Showcase -->
+                    <div class="space-y-4">
+                        <div class="flex items-center justify-between text-xs font-mono text-zinc-400">
+                            <span class="text-emerald-400 font-bold uppercase tracking-wider flex items-center gap-2">
+                                <i class="fa-solid fa-camera"></i>
+                                <span>Event Photography // Chennai Retail Summit</span>
+                            </span>
+                            <span>Retailers Association of India (RAI)</span>
+                        </div>
+
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <!-- Image 1: Stage Interaction -->
+                            <div class="bento-card overflow-hidden border-zinc-700/90 bg-zinc-950 shadow-xl group">
+                                <div class="bg-zinc-950 p-2 flex items-center justify-center">
+                                    <img src="images/chennai-retail-summit-stage.jpg" 
+                                         alt="Sanjay with industry leaders on stage at Chennai Retail Summit" 
+                                         class="w-full max-h-[460px] object-contain rounded-lg group-hover:scale-[1.02] transition duration-300">
+                                </div>
+                                <div class="p-4 bg-zinc-900 border-t border-zinc-800 space-y-1">
+                                    <div class="flex items-center justify-between">
+                                        <span class="text-xs font-bold text-white">Main Stage Dignitaries & Cohort Assembly</span>
+                                        <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-950 text-emerald-300 border border-emerald-800">FIG 1</span>
+                                    </div>
+                                    <p class="text-xs text-zinc-400">
+                                        Sanjay participating onstage alongside retail industry executives, keynote speakers, and fellow cohort delegates.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!-- Image 2: Media Wall Networking -->
+                            <div class="bento-card overflow-hidden border-zinc-700/90 bg-zinc-950 shadow-xl group">
+                                <div class="bg-zinc-950 p-2 flex items-center justify-center">
+                                    <img src="images/chennai-retail-summit-networking.jpg" 
+                                         alt="Sanjay networking at the RAI Media Wall" 
+                                         class="w-full max-h-[460px] object-contain rounded-lg group-hover:scale-[1.02] transition duration-300">
+                                </div>
+                                <div class="p-4 bg-zinc-900 border-t border-zinc-800 space-y-1">
+                                    <div class="flex items-center justify-between">
+                                        <span class="text-xs font-bold text-white">Delegation & Strategic Networking</span>
+                                        <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-950 text-emerald-300 border border-emerald-800">FIG 2</span>
+                                    </div>
+                                    <p class="text-xs text-zinc-400">
+                                        Building cross-disciplinary connections and engaging in corporate retail discussions at the RAI media wall.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Panoramic Banner View -->
+                        <div class="rounded-2xl overflow-hidden border border-zinc-700/80 bg-zinc-950 shadow-xl">
+                            <img src="assets/week00/chennai-retail-summit.png" alt="Chennai Retail Summit Composite Photo" class="w-full max-h-[420px] object-contain mx-auto bg-zinc-950">
+                            <div class="p-3 bg-zinc-900 text-center text-xs font-mono text-zinc-400 border-t border-zinc-800">
+                                Fig 3. Panoramic event composite: Onstage forum with retail leaders & media wall networking session.
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Forge Orientation & Team Dynamics Section -->
+                    <div class="p-6 sm:p-8 rounded-2xl bg-zinc-900 border border-zinc-800 space-y-5">
+                        <div class="flex items-center gap-2 text-white font-bold text-lg border-b border-zinc-800 pb-3">
+                            <i class="fa-solid fa-users-viewfinder text-emerald-400"></i>
+                            <span>Forge Innovation & Ventures — Orientation & Team Dynamics</span>
+                        </div>
+                        <p class="text-xs sm:text-sm text-zinc-300 leading-relaxed">
+                            Week 0 of PRICE ProtoSem at <strong>Forge Innovation & Ventures</strong> was a foundational start filled with learning, self-discovery, teamwork, and stepping out of the comfort zone:
+                        </p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-1">
+                            <div class="p-4 rounded-xl bg-zinc-950 border border-zinc-800 space-y-1.5">
+                                <strong class="text-white text-xs sm:text-sm flex items-center gap-2">
+                                    <i class="fa-solid fa-user-group text-emerald-400"></i>
+                                    <span>Ice-Breakers & Cohort Bonding</span>
+                                </strong>
+                                <p class="text-xs text-zinc-400 leading-relaxed">Stepping out of personal comfort zones, meeting peers across business and engineering disciplines, and establishing collaborative synergy.</p>
+                            </div>
+                            <div class="p-4 rounded-xl bg-zinc-950 border border-zinc-800 space-y-1.5">
+                                <strong class="text-white text-xs sm:text-sm flex items-center gap-2">
+                                    <i class="fa-solid fa-shapes text-emerald-400"></i>
+                                    <span>The Marshmallow Challenge</span>
+                                </strong>
+                                <p class="text-xs text-zinc-400 leading-relaxed">Hands-on rapid prototyping under strict time limits, teaching design thinking, rapid iteration, and structural failure analysis.</p>
+                            </div>
+                            <div class="p-4 rounded-xl bg-zinc-950 border border-zinc-800 space-y-1.5">
+                                <strong class="text-white text-xs sm:text-sm flex items-center gap-2">
+                                    <i class="fa-solid fa-book-open text-emerald-400"></i>
+                                    <span>Zen Pencils Storytelling</span>
+                                </strong>
+                                <p class="text-xs text-zinc-400 leading-relaxed">Visual storytelling and narrative structuring to communicate technical ideas, venture concepts, and personal vision clearly.</p>
+                            </div>
+                            <div class="p-4 rounded-xl bg-zinc-950 border border-zinc-800 space-y-1.5">
+                                <strong class="text-white text-xs sm:text-sm flex items-center gap-2">
+                                    <i class="fa-solid fa-id-badge text-emerald-400"></i>
+                                    <span>Personality & Professional Branding</span>
+                                </strong>
+                                <p class="text-xs text-zinc-400 leading-relaxed">Personality profiling assessments, team strengths calibration, and executive LinkedIn presence optimization.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Inaugural Keynote Highlight -->
+                    <div class="p-6 rounded-2xl bg-zinc-950 border border-zinc-700 space-y-3">
+                        <div class="flex items-center justify-between">
+                            <span class="text-xs font-mono text-emerald-400 font-bold uppercase tracking-wider block">Inaugural Masterclass Highlight</span>
+                            <span class="text-xs font-mono text-zinc-500">CEO Keynote</span>
+                        </div>
+                        <h4 class="text-lg font-bold text-white">Strategic Perspectives from Retailers Association of India (RAI)</h4>
+                        <p class="text-xs sm:text-sm text-zinc-300 leading-relaxed">
+                            A cornerstone highlight was the inaugural session delivered by <strong>Mr. Kumar Rajagopalan</strong>, CEO of the <strong>Retailers Association of India (RAI)</strong>, who shared insightful perspectives on the modern retail industry, phygital shopping experiences, omnichannel logistics, and consumer tech convergence.
+                        </p>
+                    </div>
+
+                    <!-- Takeaways Box -->
+                    <div class="p-6 rounded-2xl bg-zinc-900 border border-zinc-800 space-y-3 text-xs text-zinc-300">
+                        <span class="text-white font-semibold font-mono block text-xs tracking-wider">KEY TAKEAWAYS & 20-WEEK TRAJECTORY:</span>
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-zinc-300">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i><span>Practical exposure to corporate retail operations and supply chains</span></li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i><span>Executive networking with industry leaders and startup founders</span></li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i><span>Collaborative prototyping principles via Marshmallow challenge</span></li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i><span>Executive narrative design and vision communication</span></li>
+                        </ul>
+                        <div class="pt-3 border-t border-zinc-800 text-xs font-mono text-emerald-400 font-bold flex items-center justify-between">
+                            <span>🚀 Foundation locked: Grateful for learnings, connections, and memories.</span>
+                            <a href="week-00.html" target="_blank" class="text-white hover:underline flex items-center gap-1 font-sans text-xs">
+                                <span>Read Standalone Page</span>
+                                <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- SHOWCASE 2: WEEK 06 DIGITAL FABRICATION (Laser Cutting & 3D Printing) -->
+                <div id="showcase-week-06" class="bento-card p-6 sm:p-10 space-y-8 bg-zinc-950 border-zinc-700 shadow-2xl hidden">
+                    <div class="space-y-3">
+                        <div class="flex flex-wrap items-center gap-2">
+                            <span class="px-2.5 py-0.5 rounded bg-emerald-950 text-emerald-300 font-mono text-xs font-bold border border-emerald-800">
+                                WEEK 06 • PUBLISHED FIELD LOG
+                            </span>
+                            <span class="px-2.5 py-0.5 rounded bg-zinc-900 text-zinc-300 font-mono text-xs border border-zinc-800">
+                                SUBTRACTIVE & ADDITIVE FABRICATION
+                            </span>
+                            <span class="px-2.5 py-0.5 rounded bg-zinc-900 text-zinc-300 font-mono text-xs border border-zinc-800">
+                                PROTOSEM HARDWARE LAB
+                            </span>
+                        </div>
+                        <h3 class="text-2xl sm:text-4xl font-extrabold text-white tracking-tight leading-snug">
+                            Laser Cutting & 3D Printing (Digital Fabrication & Prototyping)
+                        </h3>
+                        <p class="text-sm text-zinc-400">
+                            Converting 2D/3D digital designs into functional physical prototypes using precision laser cutting (RDWorks V8) and additive manufacturing (Bambu Studio + Bambu Lab H2S).
+                        </p>
+                    </div>
+
+                    <!-- PART 1: LASER CUTTING -->
+                    <div class="p-6 sm:p-8 rounded-2xl bg-zinc-900 border border-zinc-800 space-y-6">
+                        <div class="flex items-center gap-2 text-white font-bold text-xl border-b border-zinc-800 pb-3">
+                            <i class="fa-solid fa-bolt-lightning text-emerald-400"></i>
+                            <span>Part 1: Subtractive Fabrication — Laser Cutting</span>
+                        </div>
+
+                        <!-- Step 01 -->
+                        <div class="space-y-3">
+                            <h5 class="text-xs font-bold text-emerald-400 font-mono uppercase tracking-wider">Step 01 — Laser Cutting Fundamentals</h5>
+                            <p class="text-xs sm:text-sm text-zinc-300 leading-relaxed">
+                                I explored the basic working principles of laser cutting, including:
+                            </p>
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
+                                <div class="p-3.5 rounded-lg bg-zinc-950 border border-zinc-800">
+                                    <strong class="text-white text-xs block mb-1">Power & Speed:</strong>
+                                    <span class="text-xs text-zinc-400">Balancing laser energy and cutting speed for clean, non-charred edges.</span>
+                                </div>
+                                <div class="p-3.5 rounded-lg bg-zinc-950 border border-zinc-800">
+                                    <strong class="text-white text-xs block mb-1">Focus & Kerf:</strong>
+                                    <span class="text-xs text-zinc-400">Setting correct focal distance and accounting for material removed by the beam.</span>
+                                </div>
+                                <div class="p-3.5 rounded-lg bg-zinc-950 border border-zinc-800">
+                                    <strong class="text-white text-xs block mb-1">Vector & Raster:</strong>
+                                    <span class="text-xs text-zinc-400">Using vector paths for cutting and raster scanning for fine engraving.</span>
+                                </div>
+                                <div class="p-3.5 rounded-lg bg-zinc-950 border border-zinc-800">
+                                    <strong class="text-white text-xs block mb-1">Air Assist:</strong>
+                                    <span class="text-xs text-zinc-400">Removing vaporized debris, reducing flare-ups, and keeping the focus lens clean.</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 02 with Fig 1 Image -->
+                        <div class="space-y-4 pt-4 border-t border-zinc-800">
+                            <div class="flex items-center justify-between">
+                                <h5 class="text-xs font-bold text-emerald-400 font-mono uppercase tracking-wider">Step 02 — RDWorks V8 Workflow</h5>
+                                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-zinc-950 text-zinc-400 border border-zinc-800">VECTOR PREPARATION</span>
+                            </div>
+                            <p class="text-xs sm:text-sm text-zinc-300 leading-relaxed">
+                                I prepared a DXF vector design of a personalized crest badge and processed it in RDWorks V8.
+                            </p>
+                            <div class="p-3 rounded-lg bg-zinc-950 border border-zinc-800 font-mono text-xs text-zinc-300 flex items-center gap-2">
+                                <span class="text-emerald-400 font-bold">Workflow:</span>
+                                <span>Design → DXF → Import → Position → Layer Settings → Preview → Cut</span>
+                            </div>
+                            
+                            <!-- RDWorks Image -->
+                            <div class="rounded-2xl overflow-hidden border border-zinc-700 bg-black shadow-xl">
+                                <img src="assets/week06/rdworks-preview.jpg" alt="RDWorks V8 Vector Toolpath Setup" class="w-full max-h-80 object-contain mx-auto bg-black">
+                                <div class="p-3 bg-zinc-950 text-center text-xs font-mono text-zinc-400 border-t border-zinc-800">
+                                    Fig 1. RDWorks V8 toolpath configuration, raster engraving layers & vector perimeter simulation.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 03 with Fig 2 Image -->
+                        <div class="space-y-4 pt-4 border-t border-zinc-800">
+                            <div class="flex items-center justify-between">
+                                <h5 class="text-xs font-bold text-emerald-400 font-mono uppercase tracking-wider">Step 03 — Acrylic Fabrication</h5>
+                                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-zinc-950 text-zinc-400 border border-zinc-800">SUBTRACTIVE RESULT</span>
+                            </div>
+                            <p class="text-xs sm:text-sm text-zinc-300 leading-relaxed">
+                                The design was engraved and cut on a transparent acrylic sheet. By fine-tuning focus, power, speed, and air assist, I achieved crisp, high-contrast engraving with glass-smooth cut edges.
+                            </p>
+                            
+                            <!-- Acrylic Cut Image -->
+                            <div class="rounded-2xl overflow-hidden border border-zinc-700 bg-zinc-950 shadow-xl max-w-xl mx-auto">
+                                <img src="assets/week06/acrylic-cut.jpg" alt="Acrylic Laser Cut Badge in Hand" class="w-full max-h-96 object-contain mx-auto bg-zinc-950">
+                                <div class="p-3 bg-zinc-950 text-center text-xs font-mono text-zinc-400 border-t border-zinc-800">
+                                    Fig 2. Finished transparent acrylic prototype inspected in the ProtoSem fabrication lab.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- PART 2: 3D PRINTING -->
+                    <div class="p-6 sm:p-8 rounded-2xl bg-zinc-900 border border-zinc-800 space-y-6">
+                        <div class="flex items-center gap-2 text-white font-bold text-xl border-b border-zinc-800 pb-3">
+                            <i class="fa-solid fa-cube text-emerald-400"></i>
+                            <span>Part 2: Additive Manufacturing — 3D Printing</span>
+                        </div>
+
+                        <!-- Step 04 with Slicer Image & Table -->
+                        <div class="space-y-4">
+                            <div class="flex items-center justify-between">
+                                <h5 class="text-xs font-bold text-emerald-400 font-mono uppercase tracking-wider">Step 04 — 3D Slicing in Bambu Studio</h5>
+                                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-zinc-950 text-zinc-400 border border-zinc-800">ADDITIVE SETUP</span>
+                            </div>
+                            <p class="text-xs sm:text-sm text-zinc-300 leading-relaxed">
+                                Moving to additive manufacturing, I used <strong>Bambu Studio</strong> to prepare the 3D model with optimized layer deposition and organic tree supports.
+                            </p>
+                            <div class="p-3 rounded-lg bg-zinc-950 border border-zinc-800 font-mono text-xs text-zinc-300 flex items-center gap-2">
+                                <span class="text-emerald-400 font-bold">Workflow:</span>
+                                <span>3D Model → Orient → Supports → Slice → Preview → Print</span>
+                            </div>
+
+                            <!-- Technical Specs Table -->
+                            <div class="p-5 rounded-xl bg-zinc-950 border border-zinc-800 space-y-3">
+                                <span class="text-xs font-mono text-emerald-400 font-bold uppercase tracking-wider block">PRINT SETUP SPECIFICATIONS</span>
+                                <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 font-mono text-xs">
+                                    <div class="p-2.5 rounded bg-zinc-900 border border-zinc-800"><span class="text-zinc-500 block text-[10px]">3D PRINTER</span> <span class="text-white font-bold">Bambu Lab H2S</span></div>
+                                    <div class="p-2.5 rounded bg-zinc-900 border border-zinc-800"><span class="text-zinc-500 block text-[10px]">MATERIAL</span> <span class="text-white font-bold">PLA Basic</span></div>
+                                    <div class="p-2.5 rounded bg-zinc-900 border border-zinc-800"><span class="text-zinc-500 block text-[10px]">NOZZLE DIAMETER</span> <span class="text-white font-bold">0.40 mm</span></div>
+                                    <div class="p-2.5 rounded bg-zinc-900 border border-zinc-800"><span class="text-zinc-500 block text-[10px]">LAYER HEIGHT</span> <span class="text-white font-bold">0.20 mm</span></div>
+                                    <div class="p-2.5 rounded bg-zinc-900 border border-zinc-800"><span class="text-zinc-500 block text-[10px]">SUPPORT STRUCTURE</span> <span class="text-white font-bold">Organic Tree</span></div>
+                                    <div class="p-2.5 rounded bg-zinc-900 border border-zinc-800"><span class="text-zinc-500 block text-[10px]">PRINT DURATION</span> <span class="text-white font-bold">~1 hr 09 min</span></div>
+                                </div>
+                            </div>
+
+                            <!-- 3D Slicer Image -->
+                            <div class="rounded-2xl overflow-hidden border border-zinc-700 bg-zinc-950 p-4 shadow-xl max-w-xl mx-auto text-center">
+                                <img src="assets/week06/3d-model-slice.jpg" alt="3D Model in Bambu Studio" class="w-auto max-h-48 object-contain mx-auto rounded-lg">
+                                <div class="p-2.5 text-center text-xs font-mono text-zinc-400 border-t border-zinc-800 mt-3">
+                                    Fig 3. 3D Model orientation, organic tree supports, and slicing preview in Bambu Studio.
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 05 & Step 06 with Sanjay Operating Printer Photo -->
+                        <div class="space-y-4 pt-4 border-t border-zinc-800">
+                            <div class="flex items-center justify-between">
+                                <h5 class="text-xs font-bold text-emerald-400 font-mono uppercase tracking-wider">Step 05 — Machine Operation & Touch Calibration</h5>
+                                <span class="text-[10px] font-mono px-2 py-0.5 rounded bg-zinc-950 text-zinc-400 border border-zinc-800">HARDWARE EXECUTION</span>
+                            </div>
+                            <p class="text-xs sm:text-sm text-zinc-300 leading-relaxed">
+                                At the fabrication lab, I operated the <strong>Bambu Lab H2S + AMS 2</strong> system. I managed automatic bed leveling, multi-material filament loading, first-layer adhesion tuning, temperature profiles, and layer deposition.
+                            </p>
+
+                            <!-- Sanjay Operating Printer Photo -->
+                            <div class="rounded-2xl overflow-hidden border border-zinc-700 bg-zinc-950 shadow-xl max-w-xl mx-auto">
+                                <img src="assets/week06/bambu-printer-op.jpg" alt="Sanjay Operating Bambu Lab H2S 3D Printer" class="w-full max-h-[500px] object-contain mx-auto bg-zinc-950">
+                                <div class="p-3 bg-zinc-950 text-center text-xs font-mono text-zinc-400 border-t border-zinc-800">
+                                    Fig 4. Sanjay setting up touch calibration and monitoring print progress on the Bambu Lab H2S + AMS 2.
+                                </div>
+                            </div>
+
+                            <div class="p-5 rounded-xl bg-zinc-950 border border-zinc-800 space-y-1.5">
+                                <h5 class="text-xs font-bold text-emerald-400 font-mono uppercase tracking-wider">Step 06 — Final Prototype & Post-Processing</h5>
+                                <p class="text-xs sm:text-sm text-zinc-300 leading-relaxed">
+                                    The final print completed with consistent 0.20 mm layers and well-defined structural details. The organic tree supports separated effortlessly with zero surface damage.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- KEY TAKEAWAYS & REFLECTION -->
+                    <div class="p-6 sm:p-8 rounded-2xl bg-zinc-950 border border-zinc-700 space-y-5">
+                        <span class="text-xs font-mono text-emerald-400 font-bold uppercase tracking-wider block">KEY TAKEAWAYS & REFLECTION</span>
+                        <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-xs text-zinc-300">
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i><span>Understanding laser power, speed, focus, and kerf</span></li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i><span>Preparing DXF vector files for laser fabrication</span></li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i><span>Differentiating raster engraving vs vector cutting</span></li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i><span>Understanding slicing, layer height, and supports</span></li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i><span>Operating a Bambu Lab H2S with AMS 2</span></li>
+                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i><span>Experiencing the complete digital-to-physical workflow</span></li>
+                        </ul>
+
+                        <div class="pt-4 border-t border-zinc-800 space-y-2">
+                            <span class="text-xs font-mono text-zinc-400 font-bold block">MY REFLECTION:</span>
+                            <p class="text-xs sm:text-sm text-zinc-300 italic leading-relaxed">
+                                "Week 06 helped me understand how digital designs move from CAD and toolpath preparation to actual physical prototypes. Working with both laser cutting and 3D printing gave me practical insight into subtractive and additive manufacturing."
+                            </p>
+                            <div class="text-xs font-mono text-emerald-400 pt-2 font-bold flex items-center justify-between">
+                                <span>2D/3D CAD → Toolpath → Fabrication → Physical Prototype</span>
+                                <a href="week-06.html" target="_blank" class="text-white hover:underline flex items-center gap-1 font-sans text-xs">
+                                    <span>Read Standalone Page</span>
+                                    <i class="fa-solid fa-arrow-up-right-from-square text-[10px]"></i>
+                                </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Phase Navigation Controls -->
-            <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-zinc-950 p-3 rounded-xl border border-zinc-800">
-                <div class="flex items-center gap-1.5 flex-wrap" id="phase-filters" role="tablist" aria-label="ProtoSem Phase Filter">
-                    <button onclick="filterPhase('all')" id="btn-all" class="phase-btn active px-3.5 py-1.5 rounded-lg text-xs font-mono font-medium transition bg-white text-zinc-950 shadow-sm" role="tab" aria-selected="true">
-                        ALL WEEKS
-                    </button>
-                    <button onclick="filterPhase(1)" id="btn-1" class="phase-btn px-3.5 py-1.5 rounded-lg text-xs font-mono font-medium transition bg-zinc-900 hover:bg-zinc-800 text-zinc-400 hover:text-zinc-200 border border-zinc-800" role="tab" aria-selected="false">
-                        PHASE 01 (W00–W05) • W00 LIVE
-                    </button>
-                    <button onclick="filterPhase(2)" id="btn-2" class="phase-btn px-3.5 py-1.5 rounded-lg text-xs font-mono font-medium transition bg-zinc-900 hover:bg-zinc-800 text-zinc-400 hover:text-zinc-200 border border-zinc-800" role="tab" aria-selected="false">
-                        PHASE 02 (W06–W10) • W06 LIVE
-                    </button>
-                    <button onclick="filterPhase(3)" id="btn-3" class="phase-btn px-3.5 py-1.5 rounded-lg text-xs font-mono font-medium transition bg-zinc-900 hover:bg-zinc-800 text-zinc-400 hover:text-zinc-200 border border-zinc-800" role="tab" aria-selected="false">
-                        PHASE 03 (W11–W15)
-                    </button>
-                    <button onclick="filterPhase(4)" id="btn-4" class="phase-btn px-3.5 py-1.5 rounded-lg text-xs font-mono font-medium transition bg-zinc-900 hover:bg-zinc-800 text-zinc-400 hover:text-zinc-200 border border-zinc-800" role="tab" aria-selected="false">
-                        PHASE 04 (W16–W20)
-                    </button>
+            <!-- ========================================================================= -->
+            <!-- 20-WEEK MILESTONE GRID ARCHITECTURE                                       -->
+            <!-- ========================================================================= -->
+            <div class="space-y-6 pt-6">
+                <div class="flex items-center justify-between border-b border-borderSubtle pb-4">
+                    <div>
+                        <span class="mono-tag text-zinc-400">PROGRESSION RAIL</span>
+                        <h3 class="text-xl font-bold text-white tracking-tight">20-Week Programme Roadmap & Archive</h3>
+                    </div>
+                    <span class="text-xs font-mono text-zinc-500">20 Weeks • 4 Phases</span>
                 </div>
-                <div class="text-[11px] font-mono text-zinc-400 px-2 flex items-center gap-2">
-                    <i class="fa-regular fa-folder-open text-xs"></i>
-                    <span id="active-phase-count">Showing 20 Milestone Cards + Week 00</span>
+
+                <!-- Phase Navigation Controls -->
+                <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 bg-zinc-950 p-3 rounded-xl border border-zinc-800">
+                    <div class="flex items-center gap-1.5 flex-wrap" id="phase-filters" role="tablist" aria-label="ProtoSem Phase Filter">
+                        <button onclick="filterPhase('all')" id="btn-all" class="phase-btn active px-3.5 py-1.5 rounded-lg text-xs font-mono font-medium transition bg-white text-zinc-950 shadow-sm" role="tab" aria-selected="true">
+                            ALL WEEKS
+                        </button>
+                        <button onclick="filterPhase(1)" id="btn-1" class="phase-btn px-3.5 py-1.5 rounded-lg text-xs font-mono font-medium transition bg-zinc-900 hover:bg-zinc-800 text-zinc-400 hover:text-zinc-200 border border-zinc-800" role="tab" aria-selected="false">
+                            PHASE 01 (W00–W05) • W00 LIVE
+                        </button>
+                        <button onclick="filterPhase(2)" id="btn-2" class="phase-btn px-3.5 py-1.5 rounded-lg text-xs font-mono font-medium transition bg-zinc-900 hover:bg-zinc-800 text-zinc-400 hover:text-zinc-200 border border-zinc-800" role="tab" aria-selected="false">
+                            PHASE 02 (W06–W10) • W06 LIVE
+                        </button>
+                        <button onclick="filterPhase(3)" id="btn-3" class="phase-btn px-3.5 py-1.5 rounded-lg text-xs font-mono font-medium transition bg-zinc-900 hover:bg-zinc-800 text-zinc-400 hover:text-zinc-200 border border-zinc-800" role="tab" aria-selected="false">
+                            PHASE 03 (W11–W15)
+                        </button>
+                        <button onclick="filterPhase(4)" id="btn-4" class="phase-btn px-3.5 py-1.5 rounded-lg text-xs font-mono font-medium transition bg-zinc-900 hover:bg-zinc-800 text-zinc-400 hover:text-zinc-200 border border-zinc-800" role="tab" aria-selected="false">
+                            PHASE 04 (W16–W20)
+                        </button>
+                    </div>
+                    <div class="text-[11px] font-mono text-zinc-400 px-2 flex items-center gap-2">
+                        <i class="fa-regular fa-folder-open text-xs"></i>
+                        <span id="active-phase-count">Showing 20 Milestone Cards + Week 00</span>
+                    </div>
                 </div>
-            </div>
 
-            <!-- UNIFIED 20-WEEK JOURNEY GRID -->
-            <div id="weeks-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
-                <!-- Javascript will inject the structured cards here -->
-            </div>
-
-            <!-- Future Roadmap Note -->
-            <div class="p-4 rounded-xl bg-zinc-900/40 border border-zinc-800/80 flex items-center justify-between text-xs text-zinc-500 font-mono">
-                <span class="flex items-center gap-2">
-                    <i class="fa-solid fa-circle-info text-zinc-400"></i>
-                    Published logs contain complete step-by-step documentation, event photography, parameter tables, and uncropped lab figures.
-                </span>
-                <span class="hidden sm:inline">Route Format: /protosem/week-XX</span>
+                <!-- UNIFIED 20-WEEK JOURNEY GRID -->
+                <div id="weeks-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+                    <!-- Javascript will inject the structured cards here -->
+                </div>
             </div>
 
         </section>
@@ -664,120 +1038,39 @@
         </div>
     </div>
 
-    <!-- JAVASCRIPT: Unified 20-Week Data & Complete Contents -->
+    <!-- JAVASCRIPT: Unified 20-Week Data & Controls -->
     <script>
+        function switchLiveShowcase(weekSlug) {
+            const sc00 = document.getElementById('showcase-week-00');
+            const sc06 = document.getElementById('showcase-week-06');
+            const tab00 = document.getElementById('tab-week-00');
+            const tab06 = document.getElementById('tab-week-06');
+
+            if (weekSlug === 'week-00') {
+                sc00.classList.remove('hidden');
+                sc06.classList.add('hidden');
+                tab00.className = "px-4 py-2 rounded-lg text-xs font-mono font-bold transition tab-active shadow-md flex items-center gap-2";
+                tab06.className = "px-4 py-2 rounded-lg text-xs font-mono font-medium transition bg-zinc-900 hover:bg-zinc-800 text-zinc-400 hover:text-zinc-200 border border-zinc-800 flex items-center gap-2";
+            } else if (weekSlug === 'week-06') {
+                sc06.classList.remove('hidden');
+                sc00.classList.add('hidden');
+                tab06.className = "px-4 py-2 rounded-lg text-xs font-mono font-bold transition tab-active shadow-md flex items-center gap-2";
+                tab00.className = "px-4 py-2 rounded-lg text-xs font-mono font-medium transition bg-zinc-900 hover:bg-zinc-800 text-zinc-400 hover:text-zinc-200 border border-zinc-800 flex items-center gap-2";
+            }
+        }
+
         const protoSemWeeks = [
-            // ==========================================
-            // WEEK 00: CHENNAI RETAIL SUMMIT & ORIENTATION
-            // ==========================================
+            // WEEK 00
             { 
                 week: 0, 
                 phase: 1, 
                 slug: "week-00", 
                 status: "PUBLISHED LOG", 
                 isLive: true,
-                imageThumb: "assets/week00/chennai-retail-summit.png",
-                headline: "Real-World Retail Dynamics & Strategic Networking at Chennai Retail Summit",
-                previewText: "Attending the Chennai Retail Summit (RAI) — insights into retail operations, business structures, and networking with industry leaders.",
-                fullStoryHtml: `
-                    <div class="space-y-6">
-                        <div class="flex items-center gap-2 text-emerald-400 font-mono text-xs font-bold">
-                            <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
-                            <span>SUMMIT FIELD NOTE & REFLECTION // CHENNAI RETAIL SUMMIT</span>
-                        </div>
-
-                        <!-- Summit Quote Box -->
-                        <div class="p-5 rounded-2xl bg-zinc-900/90 border border-zinc-800 space-y-2">
-                            <span class="text-[11px] font-mono text-emerald-400 font-semibold uppercase tracking-wider block">SUMMIT FIELD NOTE & REFLECTION</span>
-                            <p class="italic text-zinc-200 text-sm sm:text-base leading-relaxed">
-                                "Attending the Chennai Retail Summit was an enriching and insightful experience. I had the opportunity to meet and interact with several business professionals and industry experts, which helped me gain a better understanding of business structures, retail operations, and how businesses work in the real world. The event also gave me the chance to build meaningful connections with people from different backgrounds and learn from their experiences and perspectives. Overall, it was a great platform for learning, networking, and gaining practical exposure, and I'm grateful for the valuable insights and connections I gained from this experience."
-                            </p>
-                            <p class="text-xs text-zinc-400 pt-1 font-mono">
-                                — Sanjay Sateesh Kumar // Innovation Engineer Trainee
-                            </p>
-                        </div>
-
-                        <!-- Full Uncropped Event Photography -->
-                        <div class="space-y-2">
-                            <div class="flex items-center justify-between text-xs font-mono text-zinc-400">
-                                <span class="text-emerald-400 font-bold uppercase">EVENT PHOTOGRAPHY // CHENNAI RETAIL SUMMIT</span>
-                                <span>Retailers Association of India (RAI)</span>
-                            </div>
-                            <div class="rounded-2xl overflow-hidden border border-zinc-700 bg-zinc-950 shadow-2xl">
-                                <img src="assets/week00/chennai-retail-summit.png" alt="Sanjay with business leaders at Chennai Retail Summit" class="w-full max-h-[500px] object-contain mx-auto bg-zinc-950">
-                                <div class="p-3 bg-zinc-950 text-center text-xs font-mono text-zinc-400 border-t border-zinc-800">
-                                    Fig 1. Sanjay with business professionals and industry leaders at the Chennai Retail Summit (Retailers Association of India).
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Orientation & Team Dynamics Section -->
-                        <div class="p-6 rounded-2xl bg-zinc-900 border border-zinc-800 space-y-4">
-                            <div class="flex items-center gap-2 text-white font-bold text-lg border-b border-zinc-800 pb-3">
-                                <i class="fa-solid fa-users-viewfinder text-emerald-400"></i>
-                                <span>Forge Innovation & Ventures — Orientation & Team Dynamics</span>
-                            </div>
-                            <p class="text-xs text-zinc-300 leading-relaxed">
-                                Week 0 of PRICE ProtoSem at <strong>Forge Innovation & Ventures</strong> was a transformative start filled with self-discovery, rapid collaboration, and foundation setting:
-                            </p>
-                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
-                                <div class="p-3 rounded-lg bg-zinc-950 border border-zinc-800 space-y-1">
-                                    <strong class="text-white text-xs block flex items-center gap-1.5">
-                                        <i class="fa-solid fa-user-group text-emerald-400 text-[10px]"></i>
-                                        <span>Ice-Breakers & Team Activities</span>
-                                    </strong>
-                                    <p class="text-[11px] text-zinc-400">Stepping out of the comfort zone, bonding with interdisciplinary peers, and building team synergy.</p>
-                                </div>
-                                <div class="p-3 rounded-lg bg-zinc-950 border border-zinc-800 space-y-1">
-                                    <strong class="text-white text-xs block flex items-center gap-1.5">
-                                        <i class="fa-solid fa-shapes text-emerald-400 text-[10px]"></i>
-                                        <span>The Marshmallow Challenge</span>
-                                    </strong>
-                                    <p class="text-[11px] text-zinc-400">Hands-on design thinking and rapid iterative prototyping under strict time constraints.</p>
-                                </div>
-                                <div class="p-3 rounded-lg bg-zinc-950 border border-zinc-800 space-y-1">
-                                    <strong class="text-white text-xs block flex items-center gap-1.5">
-                                        <i class="fa-solid fa-book-open text-emerald-400 text-[10px]"></i>
-                                        <span>Zen Pencils Storytelling</span>
-                                    </strong>
-                                    <p class="text-[11px] text-zinc-400">Mastering communication, creative narrative framing, and vision articulation.</p>
-                                </div>
-                                <div class="p-3 rounded-lg bg-zinc-950 border border-zinc-800 space-y-1">
-                                    <strong class="text-white text-xs block flex items-center gap-1.5">
-                                        <i class="fa-solid fa-id-badge text-emerald-400 text-[10px]"></i>
-                                        <span>Personality & Branding</span>
-                                    </strong>
-                                    <p class="text-[11px] text-zinc-400">Personality profiling, self-awareness calibration, and professional LinkedIn branding.</p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Inaugural Keynote Highlight -->
-                        <div class="p-5 rounded-2xl bg-zinc-950 border border-zinc-700 space-y-2">
-                            <span class="text-xs font-mono text-emerald-400 font-bold uppercase tracking-wider block">Inaugural Keynote Session</span>
-                            <h4 class="text-base font-bold text-white">Strategic Perspectives from Retailers Association of India (RAI)</h4>
-                            <p class="text-xs text-zinc-300 leading-relaxed">
-                                A cornerstone highlight of Week 0 was the inaugural masterclass delivered by <strong>Mr. Kumar Rajagopalan</strong>, CEO of the <strong>Retailers Association of India (RAI)</strong>, providing strategic insights on modern supply chains, phygital consumer journeys, and retail enterprise expansion.
-                            </p>
-                        </div>
-
-                        <!-- Takeaways Box -->
-                        <div class="p-5 rounded-2xl bg-zinc-900 border border-zinc-800 space-y-2 text-xs text-zinc-300">
-                            <span class="text-white font-semibold font-mono block text-xs">KEY TAKEAWAYS & REFLECTION:</span>
-                            <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-zinc-300">
-                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i><span>Practical exposure to real-world corporate retail operations</span></li>
-                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i><span>Executive networking with industry CXOs and retail leaders</span></li>
-                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i><span>Rapid collaborative prototyping via Marshmallow challenge</span></li>
-                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i><span>Narrative communication and executive storytelling</span></li>
-                            </ul>
-                            <div class="pt-3 border-t border-zinc-800 text-[11px] font-mono text-emerald-400">
-                                🚀 Foundation locked: Grateful for the connections & learnings. Ready for the 20-week innovation roadmap!
-                            </div>
-                        </div>
-                    </div>
-                `
+                imageThumb: "images/chennai-retail-summit-stage.jpg",
+                headline: "Chennai Retail Summit & Forge Orientation",
+                previewText: "Attending the Chennai Retail Summit (RAI) — retail structures, executive networking, Marshmallow challenge, and keynote by RAI CEO Kumar Rajagopalan."
             },
-
             // Phase 01: Weeks 01-05
             { week: 1, phase: 1, slug: "week-01", status: "FIELD NOTES IN PROGRESS", headline: "Foundation & Problem Discovery" },
             { week: 2, phase: 1, slug: "week-02", status: "FIELD NOTES IN PROGRESS", headline: "Industry Domain Exploration" },
@@ -785,9 +1078,7 @@
             { week: 4, phase: 1, slug: "week-04", status: "FIELD NOTES IN PROGRESS", headline: "Problem Statement Framing" },
             { week: 5, phase: 1, slug: "week-05", status: "FIELD NOTES IN PROGRESS", headline: "Phase 01 Review & Synthesis" },
 
-            // ==========================================
-            // WEEK 06: LASER CUTTING & 3D PRINTING
-            // ==========================================
+            // WEEK 06
             { 
                 week: 6, 
                 phase: 2, 
@@ -796,191 +1087,8 @@
                 isLive: true,
                 imageThumb: "assets/week06/bambu-printer-op.jpg",
                 headline: "Laser Cutting & 3D Printing (Digital Fabrication)",
-                previewText: "Subtractive acrylic laser fabrication (RDWorks) + Additive Bambu Lab H2S 3D printing with full process images.",
-                fullStoryHtml: `
-                    <div class="space-y-8">
-                        <div class="flex items-center gap-2 text-emerald-400 font-mono text-xs font-bold">
-                            <span class="w-2 h-2 rounded-full bg-emerald-500"></span>
-                            <span>OFFICIAL FIELD NOTE // DIGITAL FABRICATION & PROTOTYPING</span>
-                        </div>
-
-                        <p class="text-base text-zinc-200 leading-relaxed">
-                            Week 06 of my ProtoSem journey introduced me to <strong>digital fabrication</strong>, where digital designs are converted into physical prototypes using laser cutting and 3D printing.
-                        </p>
-
-                        <!-- PART 1: LASER CUTTING -->
-                        <div class="p-6 rounded-2xl bg-zinc-900 border border-zinc-800 space-y-6">
-                            <div class="flex items-center gap-2 text-white font-bold text-xl border-b border-zinc-800 pb-3">
-                                <i class="fa-solid fa-bolt-lightning text-emerald-400"></i>
-                                <span>Part 1: Subtractive Fabrication — Laser Cutting</span>
-                            </div>
-
-                            <!-- Step 01 -->
-                            <div class="space-y-2">
-                                <h5 class="text-sm font-bold text-white font-mono uppercase text-emerald-400">Step 01 — Laser Cutting Fundamentals</h5>
-                                <p class="text-xs text-zinc-300 leading-relaxed">
-                                    I explored the basic working principles of laser cutting, including:
-                                </p>
-                                <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
-                                    <div class="p-3 rounded-lg bg-zinc-950 border border-zinc-800">
-                                        <strong class="text-white text-xs block">Power & Speed:</strong>
-                                        <span class="text-[11px] text-zinc-400">Balancing laser energy and cutting speed for clean results.</span>
-                                    </div>
-                                    <div class="p-3 rounded-lg bg-zinc-950 border border-zinc-800">
-                                        <strong class="text-white text-xs block">Focus & Kerf:</strong>
-                                        <span class="text-[11px] text-zinc-400">Setting correct focal distance and accounting for material removed by beam.</span>
-                                    </div>
-                                    <div class="p-3 rounded-lg bg-zinc-950 border border-zinc-800">
-                                        <strong class="text-white text-xs block">Vector & Raster:</strong>
-                                        <span class="text-[11px] text-zinc-400">Using vector paths for cutting and raster scanning for engraving.</span>
-                                    </div>
-                                    <div class="p-3 rounded-lg bg-zinc-950 border border-zinc-800">
-                                        <strong class="text-white text-xs block">Air Assist:</strong>
-                                        <span class="text-[11px] text-zinc-400">Removing debris, reducing flare-ups, and keeping the lens clean.</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Step 02 with RDWorks Image -->
-                            <div class="space-y-3 pt-3 border-t border-zinc-800">
-                                <h5 class="text-sm font-bold text-white font-mono uppercase text-emerald-400">Step 02 — RDWorks V8 Workflow</h5>
-                                <p class="text-xs text-zinc-300 leading-relaxed">
-                                    I prepared a DXF vector design of a personalized "SANJAY" crest badge and processed it in RDWorks V8.
-                                </p>
-                                <div class="p-2.5 rounded bg-zinc-950 border border-zinc-800 font-mono text-[11px] text-zinc-300">
-                                    Workflow: Design → DXF → Import → Position → Layer Settings → Preview → Cut
-                                </div>
-                                <p class="text-xs text-zinc-400">
-                                    I configured separate settings for engraving and perimeter cutting, then simulated the toolpath before fabrication.
-                                </p>
-                                <!-- RDWorks Screenshot Uncropped -->
-                                <div class="rounded-xl overflow-hidden border border-zinc-700 bg-black shadow-xl">
-                                    <img src="assets/week06/rdworks-preview.jpg" alt="RDWorks V8 Vector Toolpath Setup" class="w-full max-h-80 object-contain mx-auto bg-black">
-                                    <div class="p-2.5 bg-zinc-950 text-center text-[11px] font-mono text-zinc-400 border-t border-zinc-800">
-                                        Fig 1. RDWorks V8 toolpath configuration, raster engraving layers & vector perimeter simulation.
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Step 03 with Acrylic Image -->
-                            <div class="space-y-3 pt-3 border-t border-zinc-800">
-                                <h5 class="text-sm font-bold text-white font-mono uppercase text-emerald-400">Step 03 — Acrylic Fabrication</h5>
-                                <p class="text-xs text-zinc-300 leading-relaxed">
-                                    The design was engraved and cut on a transparent acrylic sheet. By adjusting focus, power, speed, and air assist, I achieved detailed engraving with clean cut edges.
-                                </p>
-                                <!-- Acrylic Photo Uncropped -->
-                                <div class="rounded-xl overflow-hidden border border-zinc-700 bg-zinc-950 shadow-xl">
-                                    <img src="assets/week06/acrylic-cut.jpg" alt="Acrylic Laser Cut Badge in Hand" class="w-full max-h-80 object-contain mx-auto bg-zinc-950">
-                                    <div class="p-2.5 bg-zinc-950 text-center text-[11px] font-mono text-zinc-400 border-t border-zinc-800">
-                                        Fig 2. Finished transparent acrylic prototype inspected in the fabrication lab.
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- PART 2: 3D PRINTING -->
-                        <div class="p-6 rounded-2xl bg-zinc-900 border border-zinc-800 space-y-6">
-                            <div class="flex items-center gap-2 text-white font-bold text-xl border-b border-zinc-800 pb-3">
-                                <i class="fa-solid fa-cube text-emerald-400"></i>
-                                <span>Part 2: Additive Manufacturing — 3D Printing</span>
-                            </div>
-
-                            <!-- Step 04 with Slicer Image & Table -->
-                            <div class="space-y-3">
-                                <h5 class="text-sm font-bold text-white font-mono uppercase text-emerald-400">Step 04 — 3D Printing in Bambu Studio</h5>
-                                <p class="text-xs text-zinc-300 leading-relaxed">
-                                    I then moved from subtractive fabrication to additive manufacturing using Bambu Studio.
-                                </p>
-                                <div class="p-2.5 rounded bg-zinc-950 border border-zinc-800 font-mono text-[11px] text-zinc-300">
-                                    Workflow: 3D Model → Orient → Supports → Slice → Preview → Print
-                                </div>
-
-                                <!-- Technical Print Specs Table -->
-                                <div class="p-4 rounded-xl bg-zinc-950 border border-zinc-800 space-y-2">
-                                    <span class="text-xs font-mono text-zinc-400 font-bold block">PRINT SETUP SPECIFICATIONS</span>
-                                    <div class="grid grid-cols-2 sm:grid-cols-3 gap-2 font-mono text-xs">
-                                        <div><span class="text-zinc-500">Printer:</span> <span class="text-white">Bambu Lab H2S</span></div>
-                                        <div><span class="text-zinc-500">Filament:</span> <span class="text-white">PLA Basic</span></div>
-                                        <div><span class="text-zinc-500">Nozzle:</span> <span class="text-white">0.40 mm</span></div>
-                                        <div><span class="text-zinc-500">Layer Height:</span> <span class="text-white">0.20 mm</span></div>
-                                        <div><span class="text-zinc-500">Supports:</span> <span class="text-white">Organic Tree</span></div>
-                                        <div><span class="text-zinc-500">Print Time:</span> <span class="text-white">~1 hr 09 min</span></div>
-                                    </div>
-                                </div>
-
-                                <p class="text-xs text-zinc-400">
-                                    I optimized the model orientation and added tree supports around the overhanging areas to improve stability while reducing support marks.
-                                </p>
-
-                                <!-- 3D Model Slicer Image -->
-                                <div class="rounded-xl overflow-hidden border border-zinc-700 bg-zinc-950 p-2 shadow-xl">
-                                    <img src="assets/week06/3d-model-slice.jpg" alt="3D Model in Bambu Studio" class="w-full max-h-64 object-contain mx-auto">
-                                    <div class="p-2.5 text-center text-[11px] font-mono text-zinc-400 border-t border-zinc-800 mt-2">
-                                        Fig 3. 3D Model orientation, organic tree supports, and slicing preview in Bambu Studio.
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- Step 05 & Step 06 with Sanjay at Printer Image -->
-                            <div class="space-y-3 pt-3 border-t border-zinc-800">
-                                <h5 class="text-sm font-bold text-white font-mono uppercase text-emerald-400">Step 05 — Machine Operation</h5>
-                                <p class="text-xs text-zinc-300 leading-relaxed">
-                                    At the fabrication lab, I worked with the <strong>Bambu Lab H2S + AMS 2</strong> system. I learned the basics of:
-                                </p>
-                                <ul class="list-disc list-inside text-xs text-zinc-400 space-y-1 pl-2">
-                                    <li>Automatic bed leveling</li>
-                                    <li>Filament loading and multi-material management</li>
-                                    <li>First-layer adhesion tuning</li>
-                                    <li>Temperature and extrusion calibration</li>
-                                    <li>Layer-by-layer deposition</li>
-                                </ul>
-
-                                <!-- Sanjay operating Bambu Lab H2S Photo -->
-                                <div class="rounded-xl overflow-hidden border border-zinc-700 bg-zinc-950 shadow-xl my-3">
-                                    <img src="assets/week06/bambu-printer-op.jpg" alt="Sanjay Operating Bambu Lab H2S 3D Printer" class="w-full max-h-88 object-contain mx-auto bg-zinc-950">
-                                    <div class="p-2.5 bg-zinc-950 text-center text-[11px] font-mono text-zinc-400 border-t border-zinc-800">
-                                        Fig 4. Sanjay setting up touch calibration on the Bambu Lab H2S + AMS 2 in the lab.
-                                    </div>
-                                </div>
-
-                                <div class="p-4 rounded-xl bg-zinc-950 border border-zinc-800 space-y-1">
-                                    <h5 class="text-sm font-bold text-white font-mono uppercase text-emerald-400">Step 06 — Final Prototype</h5>
-                                    <p class="text-xs text-zinc-300 leading-relaxed">
-                                        The final print produced a clean kitten figurine with consistent 0.20 mm layers and well-defined details. The organic supports were easily removed with minimal surface marks.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- KEY TAKEAWAYS & REFLECTION -->
-                        <div class="p-6 rounded-2xl bg-zinc-950 border border-zinc-700 space-y-5">
-                            <span class="text-xs font-mono text-emerald-400 font-bold uppercase tracking-wider block">KEY TAKEAWAYS</span>
-                            <ul class="grid grid-cols-1 sm:grid-cols-2 gap-2.5 text-xs text-zinc-300">
-                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i><span>Understanding laser power, speed, focus, and kerf</span></li>
-                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i><span>Preparing DXF vector files for laser fabrication</span></li>
-                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i><span>Differentiating raster engraving vs vector cutting</span></li>
-                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i><span>Understanding slicing, layer height, and supports</span></li>
-                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i><span>Operating a Bambu Lab H2S with AMS 2</span></li>
-                                <li class="flex items-center gap-2"><i class="fa-solid fa-check text-emerald-400"></i><span>Experiencing the complete digital-to-physical workflow</span></li>
-                            </ul>
-
-                            <div class="pt-4 border-t border-zinc-800 space-y-2">
-                                <span class="text-xs font-mono text-zinc-400 font-bold block">MY REFLECTION:</span>
-                                <p class="text-xs sm:text-sm text-zinc-300 italic leading-relaxed">
-                                    "Week 06 helped me understand how digital designs move from CAD and toolpath preparation to actual physical prototypes. Working with both laser cutting and 3D printing gave me practical insight into subtractive and additive manufacturing."
-                                </p>
-                                <div class="text-xs font-mono text-emerald-400 pt-2 font-bold">
-                                    2D/3D CAD → Toolpath → Fabrication → Physical Prototype
-                                </div>
-                                <div class="text-[11px] font-mono text-zinc-500">
-                                    ⚡ Phase 02 begins: Exploring rapid prototyping and digital manufacturing at ProtoSem.
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                `
+                previewText: "Subtractive acrylic laser fabrication (RDWorks) + Additive Bambu Lab H2S 3D printing with full process images."
             },
-
             // Phase 02: Weeks 07-10
             { week: 7, phase: 2, slug: "week-07", status: "FIELD NOTES IN PROGRESS", headline: "Embedded Electronics & Sensors" },
             { week: 8, phase: 2, slug: "week-08", status: "FIELD NOTES IN PROGRESS", headline: "IoT Architecture & Cloud Connect" },
@@ -1004,7 +1112,7 @@
 
         const container = document.getElementById('weeks-container');
 
-        // Render Cards Inside the Unified 20-Week Architecture
+        // Render Cards
         function renderWeekCards(weeks) {
             container.innerHTML = '';
             weeks.forEach(item => {
@@ -1021,13 +1129,23 @@
                 card.setAttribute('role', 'button');
                 card.setAttribute('tabindex', '0');
                 card.setAttribute('aria-label', `Week ${weekPadded} log card`);
-                card.onclick = () => openWeekModal(item);
-                card.onkeydown = (e) => { if(e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openWeekModal(item); } };
+                card.onclick = () => {
+                    if (item.week === 0) {
+                        switchLiveShowcase('week-00');
+                        document.getElementById('protosem').scrollIntoView({ behavior: 'smooth' });
+                    } else if (item.week === 6) {
+                        switchLiveShowcase('week-06');
+                        document.getElementById('protosem').scrollIntoView({ behavior: 'smooth' });
+                    } else {
+                        openWeekModal(item);
+                    }
+                };
+                card.onkeydown = (e) => { if(e.key === 'Enter' || e.key === ' ') { e.preventDefault(); card.click(); } };
 
                 card.innerHTML = `
                     <div class="space-y-4">
                         <div class="flex items-center justify-between text-[11px] font-mono">
-                            <span class="px-2.5 py-0.5 rounded ${isLive ? 'bg-emerald-950 text-emerald-300 border border-emerald-800' : 'bg-zinc-900 border border-zinc-800 text-zinc-400'}">
+                            <span class="px-2.5 py-0.5 rounded ${isLive ? 'bg-emerald-950 text-emerald-300 border border-emerald-800 font-bold' : 'bg-zinc-900 border border-zinc-800 text-zinc-400'}">
                                 PHASE ${phasePadded}
                             </span>
                             <span class="${isLive ? 'text-emerald-400 font-bold' : 'text-zinc-500'} font-mono">${item.slug}</span>
@@ -1036,7 +1154,7 @@
                         <div>
                             <div class="text-2xl font-extrabold text-white group-hover:text-emerald-300 transition tracking-tight flex items-center justify-between">
                                 <span>WEEK ${weekPadded}</span>
-                                <i class="fa-solid fa-arrow-up-right-from-square text-xs ${isLive ? 'text-emerald-400' : 'text-zinc-500 group-hover:text-white'} transition"></i>
+                                <i class="fa-solid ${isLive ? 'fa-arrow-down' : 'fa-arrow-up-right-from-square'} text-xs ${isLive ? 'text-emerald-400' : 'text-zinc-500 group-hover:text-white'} transition"></i>
                             </div>
                             <h4 class="text-sm font-semibold text-zinc-200 mt-1.5 line-clamp-1">${item.headline || ''}</h4>
                             ${item.previewText ? `<p class="text-xs text-zinc-400 mt-2 line-clamp-2 leading-relaxed">${item.previewText}</p>` : ''}
@@ -1044,7 +1162,7 @@
 
                         ${isLive && item.imageThumb ? `
                             <div class="rounded-lg overflow-hidden border border-zinc-800 pt-1">
-                                <img src="${item.imageThumb}" alt="Week thumbnail" class="w-full h-24 object-cover object-center rounded">
+                                <img src="${item.imageThumb}" alt="Week thumbnail" class="w-full h-28 object-cover object-center rounded">
                             </div>
                         ` : ''}
                     </div>
@@ -1052,7 +1170,7 @@
                     <div class="pt-4 border-t border-zinc-800/80 flex items-center justify-between text-[11px] font-mono mt-5">
                         <span class="truncate uppercase tracking-wider ${isLive ? 'text-emerald-400 font-bold' : 'text-zinc-500'}">${item.status}</span>
                         <span class="${isLive ? 'text-emerald-300 font-bold' : 'text-zinc-400 group-hover:text-zinc-200'} font-sans text-xs flex items-center gap-1">
-                            <span>${isLive ? 'Read Full Story' : 'Story'}</span>
+                            <span>${isLive ? 'View Showcase' : 'Story'}</span>
                             <i class="fa-solid fa-arrow-right text-[10px]"></i>
                         </span>
                     </div>
@@ -1091,7 +1209,7 @@
             renderWeekCards(filtered);
         }
 
-        // Modal Functionality (Opens Complete Uncropped Story)
+        // Modal Functionality
         function openWeekModal(item) {
             const weekPadded = String(item.week).padStart(2, '0');
             const phasePadded = String(item.phase).padStart(2, '0');
@@ -1101,19 +1219,15 @@
             document.getElementById('modal-title').innerText = `WEEK ${weekPadded}${item.headline ? ' — ' + item.headline : ''}`;
             
             const contentDiv = document.getElementById('modal-content');
-            if (item.isLive && item.fullStoryHtml) {
-                contentDiv.innerHTML = item.fullStoryHtml;
-            } else {
-                contentDiv.innerHTML = `
-                    <div class="text-white font-medium flex items-center gap-2 text-xs font-mono">
-                        <i class="fa-regular fa-clock text-zinc-400"></i>
-                        <span>STATUS: FIELD NOTES IN PROGRESS</span>
-                    </div>
-                    <p class="text-zinc-400">
-                        This week is part of the 20-week PRICE ProtoSem innovation roadmap. The detailed case study, technical documentation, and reflective blog post for this week will be published here upon programme phase completion.
-                    </p>
-                `;
-            }
+            contentDiv.innerHTML = `
+                <div class="text-white font-medium flex items-center gap-2 text-xs font-mono">
+                    <i class="fa-regular fa-clock text-zinc-400"></i>
+                    <span>STATUS: FIELD NOTES IN PROGRESS</span>
+                </div>
+                <p class="text-zinc-400">
+                    This milestone is part of the 20-week PRICE ProtoSem innovation roadmap at Forge Innovation & Ventures. The detailed documentation and laboratory analysis will be published upon cohort phase completion.
+                </p>
+            `;
             
             const modal = document.getElementById('week-modal');
             modal.classList.remove('hidden');
