@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 06: Laser Cutting & 3D Printing (Digital Fabrication) | Sanjay Sateesh Kumar</title>
+    <meta name="description" content="Subtractive laser cutting in RDWorks V8 and additive 3D printing on Bambu Lab H2S + AMS 2 - PRICE ProtoSem Week 06 Field Log.">
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        obsidian: '#09090b',
+                        surface: '#121215',
+                        surfaceLight: '#1c1c21',
+                        borderSubtle: '#27272a',
+                        accent: '#ffffff',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', '-apple-system', 'sans-serif'],
+                        mono: ['JetBrains Mono', 'monospace'],
+                    }
+                }
+            }
+        }
+    </script>
+    <!-- Fonts & Icons -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        body {
+            background-color: #09090b;
+            color: #f4f4f5;
+            font-family: 'Inter', sans-serif;
+        }
+        .bento-card {
+            background: #121215;
+            border: 1px solid #27272a;
+            border-radius: 1rem;
+        }
+        .mono-tag {
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.75rem;
+            letter-spacing: 0.05em;
+        }
+    </style>
+</head>
+<body class="bg-obsidian text-zinc-100 antialiased selection:bg-zinc-100 selection:text-zinc-900">
+
+    <!-- Top Navigation Bar -->
+    <header class="sticky top-0 z-50 backdrop-blur-md bg-obsidian/85 border-b border-borderSubtle">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+            <a href="index.html" class="flex items-center space-x-3 group">
+                <div class="w-9 h-9 rounded-lg bg-zinc-100 text-zinc-950 font-bold flex items-center justify-center font-mono text-sm tracking-tighter">
+                    SK
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-bold text-sm tracking-tight text-white group-hover:text-zinc-300 transition">Sanjay Sateesh Kumar</span>
+                    <span class="text-[11px] text-zinc-400 font-mono">ProtoSem Field Logs</span>
+                </div>
+            </a>
+
+            <div class="flex items-center space-x-3">
+                <a href="index.html#protosem" class="px-3.5 py-1.5 text-xs font-mono font-medium rounded-lg bg-zinc-900 hover:bg-zinc-800 text-zinc-300 border border-zinc-700 transition flex items-center gap-2">
+                    <i class="fa-solid fa-arrow-left"></i>
+                    <span>Back to Portfolio</span>
+                </a>
+                <a href="resume.html" target="_blank" class="hidden sm:inline-flex px-3.5 py-1.5 text-xs font-mono font-medium rounded-lg bg-zinc-800 hover:bg-zinc-700 text-zinc-200 border border-zinc-700 transition items-center gap-2">
+                    <i class="fa-solid fa-file-lines"></i>
+                    <span>Resume</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content Container -->
+    <main class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-12">
+
+        <article class="space-y-8">
+            <div class="space-y-4">
+                <div class="flex flex-wrap items-center gap-2">
+                    <span class="px-2.5 py-1 rounded bg-emerald-950 text-emerald-300 font-mono font-bold text-xs border border-emerald-800">
+                        WEEK 06 FIELD LOG
+                    </span>
+                    <span class="px-2.5 py-1 rounded bg-zinc-900 border border-zinc-800 text-zinc-400 font-mono text-xs">
+                        DIGITAL FABRICATION & PROTOTYPING
+                    </span>
+                    <span class="px-2.5 py-1 rounded bg-zinc-900 border border-zinc-800 text-zinc-400 font-mono text-xs">
+                        FORGE INNOVATION & VENTURES
+                    </span>
+                </div>
+
+                <h1 class="text-3xl sm:text-5xl font-extrabold text-white tracking-tight leading-tight">
+                    Laser Cutting & 3D Printing (Digital Fabrication & Prototyping)
+                </h1>
+
+                <p class="text-lg text-zinc-300 leading-relaxed">
+                    Converting 2D/3D digital designs into physical prototypes using precision subtractive laser cutting (RDWorks V8) and additive manufacturing (Bambu Studio + Bambu Lab H2S).
+                </p>
+            </div>
+
+            <!-- PART 1: LASER CUTTING -->
+            <div class="p-6 sm:p-8 rounded-2xl bg-zinc-900 border border-zinc-800 space-y-6">
+                <div class="flex items-center gap-2 text-white font-bold text-xl border-b border-zinc-800 pb-3">
+                    <i class="fa-solid fa-bolt-lightning text-emerald-400"></i>
+                    <span>Part 1: Subtractive Fabrication — Laser Cutting</span>
+                </div>
+
+                <div class="space-y-3">
+                    <h5 class="text-xs font-bold text-emerald-400 font-mono uppercase tracking-wider">Step 01 — Laser Cutting Fundamentals</h5>
+                    <p class="text-xs sm:text-sm text-zinc-300 leading-relaxed">
+                        I explored the basic working principles of laser cutting:
+                    </p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 pt-1">
+                        <div class="p-3.5 rounded-lg bg-zinc-950 border border-zinc-800">
+                            <strong class="text-white text-xs block mb-1">Power & Speed:</strong>
+                            <span class="text-xs text-zinc-400">Balancing laser energy and cutting speed for clean edges.</span>
+                        </div>
+                        <div class="p-3.5 rounded-lg bg-zinc-950 border border-zinc-800">
+                            <strong class="text-white text-xs block mb-1">Focus & Kerf:</strong>
+                            <span class="text-xs text-zinc-400">Setting correct focal distance and accounting for material removed.</span>
+                        </div>
+                        <div class="p-3.5 rounded-lg bg-zinc-950 border border-zinc-800">
+                            <strong class="text-white text-xs block mb-1">Vector & Raster:</strong>
+                            <span class="text-xs text-zinc-400">Vector paths for cutting and raster scanning for engraving.</span>
+                        </div>
+                        <div class="p-3.5 rounded-lg bg-zinc-950 border border-zinc-800">
+                            <strong class="text-white text-xs block mb-1">Air Assist:</strong>
+                            <span class="text-xs text-zinc-400">Removing debris, reducing flare-ups, and keeping lens clean.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 02 with RDWorks Image -->
+                <div class="space-y-4 pt-4 border-t border-zinc-800">
+                    <h5 class="text-xs font-bold text-emerald-400 font-mono uppercase tracking-wider">Step 02 — RDWorks V8 Workflow</h5>
+                    <p class="text-xs sm:text-sm text-zinc-300 leading-relaxed">
+                        I prepared a DXF vector design of a crest badge and processed it in RDWorks V8.
+                    </p>
+                    <div class="p-3 rounded-lg bg-zinc-950 border border-zinc-800 font-mono text-xs text-zinc-300">
+                        Workflow: Design → DXF → Import → Position → Layer Settings → Preview → Cut
+                    </div>
+                    <div class="rounded-2xl overflow-hidden border border-zinc-700 bg-black shadow-xl">
+                        <img src="assets/week06/rdworks-preview.jpg" alt="RDWorks V8 Vector Toolpath Setup" class="w-full max-h-80 object-contain mx-auto bg-black">
+                        <div class="p-3 bg-zinc-950 text-center text-xs font-mono text-zinc-400 border-t border-zinc-800">
+                            Fig 1. RDWorks V8 toolpath configuration, raster engraving layers & vector simulation.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 03 with Acrylic Cut Image -->
+                <div class="space-y-4 pt-4 border-t border-zinc-800">
+                    <h5 class="text-xs font-bold text-emerald-400 font-mono uppercase tracking-wider">Step 03 — Acrylic Fabrication</h5>
+                    <p class="text-xs sm:text-sm text-zinc-300 leading-relaxed">
+                        The design was engraved and cut on transparent acrylic sheet with crisp contrast and clean cut edges.
+                    </p>
+                    <div class="rounded-2xl overflow-hidden border border-zinc-700 bg-zinc-950 shadow-xl max-w-xl mx-auto">
+                        <img src="assets/week06/acrylic-cut.jpg" alt="Acrylic Laser Cut Badge in Hand" class="w-full max-h-96 object-contain mx-auto bg-zinc-950">
+                        <div class="p-3 bg-zinc-950 text-center text-xs font-mono text-zinc-400 border-t border-zinc-800">
+                            Fig 2. Finished transparent acrylic prototype in the lab.
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PART 2: 3D PRINTING -->
+            <div class="p-6 sm:p-8 rounded-2xl bg-zinc-900 border border-zinc-800 space-y-6">
+                <div class="flex items-center gap-2 text-white font-bold text-xl border-b border-zinc-800 pb-3">
+                    <i class="fa-solid fa-cube text-emerald-400"></i>
+                    <span>Part 2: Additive Manufacturing — 3D Printing</span>
+                </div>
+
+                <div class="space-y-4">
+                    <h5 class="text-xs font-bold text-emerald-400 font-mono uppercase tracking-wider">Step 04 — 3D Slicing in Bambu Studio</h5>
+                    <p class="text-xs sm:text-sm text-zinc-300 leading-relaxed">
+                        Prepared the 3D model in Bambu Studio with organic tree supports.
+                    </p>
+                    <div class="p-5 rounded-xl bg-zinc-950 border border-zinc-800 space-y-3">
+                        <span class="text-xs font-mono text-emerald-400 font-bold uppercase tracking-wider block">PRINT SETUP SPECIFICATIONS</span>
+                        <div class="grid grid-cols-2 sm:grid-cols-3 gap-3 font-mono text-xs">
+                            <div class="p-2.5 rounded bg-zinc-900 border border-zinc-800"><span class="text-zinc-500 block text-[10px]">3D PRINTER</span> <span class="text-white font-bold">Bambu Lab H2S</span></div>
+                            <div class="p-2.5 rounded bg-zinc-900 border border-zinc-800"><span class="text-zinc-500 block text-[10px]">MATERIAL</span> <span class="text-white font-bold">PLA Basic</span></div>
+                            <div class="p-2.5 rounded bg-zinc-900 border border-zinc-800"><span class="text-zinc-500 block text-[10px]">NOZZLE DIAMETER</span> <span class="text-white font-bold">0.40 mm</span></div>
+                            <div class="p-2.5 rounded bg-zinc-900 border border-zinc-800"><span class="text-zinc-500 block text-[10px]">LAYER HEIGHT</span> <span class="text-white font-bold">0.20 mm</span></div>
+                            <div class="p-2.5 rounded bg-zinc-900 border border-zinc-800"><span class="text-zinc-500 block text-[10px]">SUPPORT STRUCTURE</span> <span class="text-white font-bold">Organic Tree</span></div>
+                            <div class="p-2.5 rounded bg-zinc-900 border border-zinc-800"><span class="text-zinc-500 block text-[10px]">PRINT DURATION</span> <span class="text-white font-bold">~1 hr 09 min</span></div>
+                        </div>
+                    </div>
+
+                    <div class="rounded-2xl overflow-hidden border border-zinc-700 bg-zinc-950 p-4 shadow-xl max-w-xl mx-auto text-center">
+                        <img src="assets/week06/3d-model-slice.jpg" alt="3D Model in Bambu Studio" class="w-auto max-h-48 object-contain mx-auto rounded-lg">
+                        <div class="p-2.5 text-center text-xs font-mono text-zinc-400 border-t border-zinc-800 mt-3">
+                            Fig 3. 3D Model orientation & slicing preview in Bambu Studio.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 05 & 06 with Sanjay Operating Printer Photo -->
+                <div class="space-y-4 pt-4 border-t border-zinc-800">
+                    <h5 class="text-xs font-bold text-emerald-400 font-mono uppercase tracking-wider">Step 05 — Machine Operation</h5>
+                    <p class="text-xs sm:text-sm text-zinc-300 leading-relaxed">
+                        Operating the Bambu Lab H2S + AMS 2 system for automated calibration and multi-material printing.
+                    </p>
+
+                    <div class="rounded-2xl overflow-hidden border border-zinc-700 bg-zinc-950 shadow-xl max-w-xl mx-auto">
+                        <img src="assets/week06/bambu-printer-op.jpg" alt="Sanjay Operating Bambu Lab H2S 3D Printer" class="w-full max-h-[500px] object-contain mx-auto bg-zinc-950">
+                        <div class="p-3 bg-zinc-950 text-center text-xs font-mono text-zinc-400 border-t border-zinc-800">
+                            Fig 4. Sanjay setting up touch calibration on the Bambu Lab H2S + AMS 2.
+                        </div>
+                    </div>
+
+                    <div class="p-5 rounded-xl bg-zinc-950 border border-zinc-800 space-y-1.5">
+                        <h5 class="text-xs font-bold text-emerald-400 font-mono uppercase tracking-wider">Step 06 — Final Prototype</h5>
+                        <p class="text-xs sm:text-sm text-zinc-300 leading-relaxed">
+                            Completed 3D print with crisp 0.20 mm layers and easy-removal tree supports.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pt-6 border-t border-zinc-800 flex items-center justify-between text-xs font-mono text-zinc-400">
+                <a href="index.html#protosem" class="text-white hover:underline flex items-center gap-2">
+                    <i class="fa-solid fa-arrow-left"></i>
+                    <span>Return to Portfolio</span>
+                </a>
+                <span>PRICE ProtoSem • Forge Innovation</span>
+            </div>
+        </article>
+    </main>
+</body>
+</html>
